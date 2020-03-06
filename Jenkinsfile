@@ -18,7 +18,7 @@ pipeline {
         stage('Upload to AWS') {
             steps {
                 withAWS(region:'EE.UU. Este (Ohio)us-east-2', credentials:'aws-static') {
-                    s3Upload(pathStyleAccessEnabled:true, payloadSigningEnabled: true, file:'index.html', aws-jenkins-pipelines')
+                    s3Upload(pathStyleAccessEnabled:true, payloadSigningEnabled: true, file:'index.html', aws-jenkins-pipelines)
             }
         }
     }
